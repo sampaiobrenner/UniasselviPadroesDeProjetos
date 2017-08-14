@@ -19,7 +19,7 @@ namespace ExerciciosAula02
             area = (Math.PI * Math.Pow(raio, 2));
 
             // O método .ToString("n2") indica que o double írá imprimir somente com duas cadas decimais.
-            Console.WriteLine(String.Format("A área do circulo é {0}", area.ToString("n2")));
+            Console.WriteLine(String.Format("A área do circulo é {0:2}", area));
             Console.ReadKey();
         }
     }
