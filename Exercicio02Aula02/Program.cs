@@ -27,7 +27,7 @@ namespace Exercicio02Aula02
             media = (primeiraParcial * 1.2) + (primeiraOficial * 2.8) + (segundaParcial * 1.8) + (segundaOficial * 4.2);
             media /= 10;
 
-            Console.Write(String.Format("A média é: {0}", media));
+            Console.Write(String.Format("A média é: {0:00}", media));
             Console.ReadKey();
         }
     }

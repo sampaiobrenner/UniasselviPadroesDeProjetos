@@ -25,7 +25,7 @@ namespace Exercicio04Aula02
 
             litrosConsumidos = distanciaPercorrida / 12;
 
-            Console.WriteLine(String.Format("Foram consumidos {0:2} litros", litrosConsumidos));
+            Console.WriteLine(String.Format("Foram consumidos {0:0.00} litros", litrosConsumidos));
             Console.ReadKey();
         }
     }
