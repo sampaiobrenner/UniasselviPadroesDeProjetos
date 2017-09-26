@@ -22,6 +22,10 @@ namespace Aula06
 
             carro.Identicacao = 1010;
             carro.VelocidadeMaxima = 140;
+
+            Piloto piloto = new Piloto();
+            carro.Piloto = piloto;
+
             Console.WriteLine(carro.Ligar());
             Console.WriteLine(carro.VelocidadeAtual);
             carro.Acelerar();
