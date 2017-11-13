@@ -19,7 +19,7 @@ namespace Empresa.View
         {
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNomeDepartamento = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -33,9 +33,11 @@ namespace Empresa.View
             this.buttonSalvar.TabIndex = 2;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // buttonCancelar
             // 
+            this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonCancelar.Location = new System.Drawing.Point(331, 41);
             this.buttonCancelar.Name = "buttonCancelar";
@@ -43,13 +45,14 @@ namespace Empresa.View
             this.buttonCancelar.TabIndex = 3;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // textBox1
+            // txtNomeDepartamento
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(324, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtNomeDepartamento.Location = new System.Drawing.Point(75, 15);
+            this.txtNomeDepartamento.Name = "txtNomeDepartamento";
+            this.txtNomeDepartamento.Size = new System.Drawing.Size(324, 20);
+            this.txtNomeDepartamento.TabIndex = 1;
             // 
             // label1
             // 
@@ -67,7 +70,7 @@ namespace Empresa.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancelar;
             this.ClientSize = new System.Drawing.Size(413, 77);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNomeDepartamento);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.buttonCancelar);
@@ -76,13 +79,14 @@ namespace Empresa.View
             this.Text = "Novo Departamento";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
 
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNomeDepartamento;
         private System.Windows.Forms.Label label1;
     }
 }

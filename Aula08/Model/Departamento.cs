@@ -17,7 +17,7 @@ namespace Empresa.Model
 
         public bool Atualizar()
         {
-            return new DepartamentoDAO().Persistir(this);
+            return new DepartamentoDAO().Atualizar(this);
         }
 
         public static bool Excluir(int id)

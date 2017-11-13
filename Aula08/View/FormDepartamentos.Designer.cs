@@ -18,36 +18,36 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listaDepartamentos = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1.SuspendLayout();
+            this.menu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnNovoDepartamento = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnEditarDepartamento = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnExcluirDepartamento = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAtualizarDepartamento = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSair = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listView1
+            // listaDepartamentos
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listaDepartamentos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.listView1.ContextMenuStrip = this.contextMenuStrip1;
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(505, 273);
-            this.listView1.TabIndex = 0;
-            this.listView1.TabStop = false;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listaDepartamentos.ContextMenuStrip = this.menu;
+            this.listaDepartamentos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listaDepartamentos.FullRowSelect = true;
+            this.listaDepartamentos.GridLines = true;
+            this.listaDepartamentos.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listaDepartamentos.Location = new System.Drawing.Point(0, 0);
+            this.listaDepartamentos.MultiSelect = false;
+            this.listaDepartamentos.Name = "listaDepartamentos";
+            this.listaDepartamentos.Size = new System.Drawing.Size(505, 273);
+            this.listaDepartamentos.TabIndex = 0;
+            this.listaDepartamentos.TabStop = false;
+            this.listaDepartamentos.UseCompatibleStateImageBehavior = false;
+            this.listaDepartamentos.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -59,76 +59,83 @@
             this.columnHeader2.Text = "Descricao";
             this.columnHeader2.Width = 360;
             // 
-            // contextMenuStrip1
+            // menu
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novoToolStripMenuItem,
-            this.editarToolStripMenuItem,
-            this.excluirToolStripMenuItem,
-            this.atualizarToolStripMenuItem,
-            this.sairToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 136);
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnNovoDepartamento,
+            this.btnEditarDepartamento,
+            this.btnExcluirDepartamento,
+            this.btnAtualizarDepartamento,
+            this.btnSair});
+            this.menu.Name = "contextMenuStrip1";
+            this.menu.Size = new System.Drawing.Size(153, 136);
+            this.menu.Opening += new System.ComponentModel.CancelEventHandler(this.menu_Opening);
             // 
-            // novoToolStripMenuItem
+            // btnNovoDepartamento
             // 
-            this.novoToolStripMenuItem.Image = global::Empresa.Properties.Resources.NovoP;
-            this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.novoToolStripMenuItem.Text = "Novo";
+            this.btnNovoDepartamento.Image = global::Empresa.Properties.Resources.NovoP;
+            this.btnNovoDepartamento.Name = "btnNovoDepartamento";
+            this.btnNovoDepartamento.Size = new System.Drawing.Size(116, 22);
+            this.btnNovoDepartamento.Text = "Novo";
+            this.btnNovoDepartamento.Click += new System.EventHandler(this.btnNovoDepartamento_Click);
             // 
-            // editarToolStripMenuItem
+            // btnEditarDepartamento
             // 
-            this.editarToolStripMenuItem.Image = global::Empresa.Properties.Resources.EditarP;
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.editarToolStripMenuItem.Text = "Editar";
+            this.btnEditarDepartamento.Image = global::Empresa.Properties.Resources.EditarP;
+            this.btnEditarDepartamento.Name = "btnEditarDepartamento";
+            this.btnEditarDepartamento.Size = new System.Drawing.Size(116, 22);
+            this.btnEditarDepartamento.Text = "Editar";
+            this.btnEditarDepartamento.Click += new System.EventHandler(this.btnEditarDepartamento_Click);
             // 
-            // excluirToolStripMenuItem
+            // btnExcluirDepartamento
             // 
-            this.excluirToolStripMenuItem.Image = global::Empresa.Properties.Resources.ExcluirP;
-            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.excluirToolStripMenuItem.Text = "Excluir";
+            this.btnExcluirDepartamento.Image = global::Empresa.Properties.Resources.ExcluirP;
+            this.btnExcluirDepartamento.Name = "btnExcluirDepartamento";
+            this.btnExcluirDepartamento.Size = new System.Drawing.Size(116, 22);
+            this.btnExcluirDepartamento.Text = "Excluir";
+            this.btnExcluirDepartamento.Click += new System.EventHandler(this.btnExcluirDepartamento_Click);
             // 
-            // atualizarToolStripMenuItem
+            // btnAtualizarDepartamento
             // 
-            this.atualizarToolStripMenuItem.Image = global::Empresa.Properties.Resources.AtualizarP;
-            this.atualizarToolStripMenuItem.Name = "atualizarToolStripMenuItem";
-            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.atualizarToolStripMenuItem.Text = "Atualizar";
+            this.btnAtualizarDepartamento.Image = global::Empresa.Properties.Resources.AtualizarP;
+            this.btnAtualizarDepartamento.Name = "btnAtualizarDepartamento";
+            this.btnAtualizarDepartamento.Size = new System.Drawing.Size(116, 22);
+            this.btnAtualizarDepartamento.Text = "Atualizar";
+            this.btnAtualizarDepartamento.Click += new System.EventHandler(this.btnAtualizarDepartamento_Click);
             // 
-            // sairToolStripMenuItem
+            // btnSair
             // 
-            this.sairToolStripMenuItem.Image = global::Empresa.Properties.Resources.SairP;
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sairToolStripMenuItem.Text = "Sair";
+            this.btnSair.Image = global::Empresa.Properties.Resources.SairP;
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(116, 22);
+            this.btnSair.Text = "Sair";
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // FormDepartamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 273);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listaDepartamentos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormDepartamentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Departamentos";
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.menu.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listaDepartamentos;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem novoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem atualizarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip menu;
+        private System.Windows.Forms.ToolStripMenuItem btnNovoDepartamento;
+        private System.Windows.Forms.ToolStripMenuItem btnAtualizarDepartamento;
+        private System.Windows.Forms.ToolStripMenuItem btnExcluirDepartamento;
+        private System.Windows.Forms.ToolStripMenuItem btnEditarDepartamento;
+        private System.Windows.Forms.ToolStripMenuItem btnSair;
     }
 }

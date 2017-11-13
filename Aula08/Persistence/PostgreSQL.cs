@@ -18,7 +18,7 @@ namespace Empresa.Persistence
                                              Port=5432;
                                              Database=empresa;
                                              Username=postgres;
-                                             Password=123.qwe;";
+                                             Password=assevim;";
 
                 conexao.Open();
             }

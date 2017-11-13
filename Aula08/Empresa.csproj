@@ -65,6 +65,7 @@
     <Compile Include="Model\Departamento.cs" />
     <Compile Include="Persistence\DepartamentoDAO.cs" />
     <Compile Include="Persistence\PostgreSQL.cs" />
+    <Compile Include="Presenter\DepartamentoPresenter.cs" />
     <Compile Include="View\FormDepartamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,9 +152,7 @@
   <ItemGroup>
     <None Include="Resources\SairG.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presenter\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
       <Visible>False</Visible>

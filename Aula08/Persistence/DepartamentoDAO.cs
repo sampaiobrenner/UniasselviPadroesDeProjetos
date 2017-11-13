@@ -69,7 +69,7 @@ namespace Empresa.Persistence
             {
                 NpgsqlConnection conexao = PostgreSQL.Conexao;
 
-                string query = $@"DELETE FROM depatamento
+                string query = $@"DELETE FROM departamento
                                   WHERE id = {id}";
 
                 NpgsqlCommand comando = new NpgsqlCommand(query, conexao);
