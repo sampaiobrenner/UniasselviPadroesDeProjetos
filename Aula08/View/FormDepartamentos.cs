@@ -1,4 +1,5 @@
 ﻿using Empresa.Model;
+using Empresa.Persistence;
 using Empresa.Presenter;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -77,6 +78,11 @@ namespace Empresa.View
 
                 listaDepartamentos.Items.Add(new ListViewItem(itemLista));
             }
+        }
+
+        private void FormDepartamentos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            PostgreSQL.FecharConexao();
         }
     }
 }

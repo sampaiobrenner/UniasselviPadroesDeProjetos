@@ -68,7 +68,7 @@
             this.btnAtualizarDepartamento,
             this.btnSair});
             this.menu.Name = "contextMenuStrip1";
-            this.menu.Size = new System.Drawing.Size(153, 136);
+            this.menu.Size = new System.Drawing.Size(117, 114);
             this.menu.Opening += new System.ComponentModel.CancelEventHandler(this.menu_Opening);
             // 
             // btnNovoDepartamento
@@ -121,6 +121,7 @@
             this.Name = "FormDepartamentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Departamentos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDepartamentos_FormClosing);
             this.menu.ResumeLayout(false);
             this.ResumeLayout(false);
 
